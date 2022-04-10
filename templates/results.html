@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/results.css') }}">
+    <title>bitcamp💯</title>
+</head>
+<body>
+    <!-- title -->
+    <p><div class="title-banner title">ByteSize🍪</div></p>
+    <p><div class="title-banner blurb">Read text one bite at a time.</div></p>
+    <!-- text input forms -->
+    <form method="POST">
+        <div class="results-layout">
+            <div class="left-column">
+                <textarea class="text-input transform" name="text" placeholder="Enter text here..."></textarea>
+                <input class="query-input" name="text2" placeholder="What are you looking for?">
+                <!-- submit button -->
+                <input class="search-btn" id="submit-button" type="submit" placeholder="search">
+            </div>
+            <div class="right-column">
+                <textarea class="result-box">{{ value[0] }}</textarea>
+                <textarea class="result-box">{{ value[1] }}</textarea>
+                <textarea class="result-box">{{ value[2] }}</textearea>
+                <textarea class="result-box">{{ value[3] }}</textarea>
+                <textarea class="result-box">{{ value[4] }}</textarea>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
